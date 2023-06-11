@@ -1,6 +1,6 @@
 vk_api
 telegram
-
+Selenium
 
 Pillow
 matplotlib
