@@ -1,8 +1,10 @@
 import streamlit as st
 import vk_api
 
+import subprocess
+
 # установка библиотеки vk_api
-st.write("!pip install vk_api")
+subprocess.call(['pip', 'install', 'vk_api'])
 
 import vk_api
 import requests
