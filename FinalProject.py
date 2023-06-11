@@ -1,7 +1,4 @@
 import streamlit as st
-import subprocess
-subprocess.call(['pip', 'install', 'vk_api'])
-
 #импортируем мои модули и time
 import my_modules.memescrapping as memes
 import my_modules.image_comparison as ic
