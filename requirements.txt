@@ -1,7 +1,7 @@
 vk_api
 telegram
 Selenium
-
+python-telegram-bot
 Pillow
 matplotlib
 networkx
