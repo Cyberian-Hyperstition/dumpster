@@ -29,7 +29,20 @@ print("Hi there! This is AutoShitposter.", '\n',
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 def main():
-    st.title("Streamlit Interface")
+    st.title("Hi there! This is AutoShitposter.", '\n',
+      "My functions are:"'\n',
+      "(1) Add group posts to my database", '\n', #загружаем картинки из групп в database. рекомендовано: вызвать 3 раза эту функцию, вводя:
+                                                  # 1. abotai, 150; 2. societya, 150; fan_club_of_jesus_christ, 50. 
+                                                  #(слово перед запятой -- это первый инпут, число -- второй) 
+                                                  #работает с любыми инпутами, но иначе может получиться скучно или работать слишком долго
+      "(2) Draw a graph of group re-posts", '\n', # граф связей между группами. подробнее в модуле image_comparison
+      "(3) Discover re-posting connections between two groups in my database", '\n', #то же самое, что и с графом, но между двумя сообществами. возвращает "силу" ребра. 
+                                                                                     #подробнее в модуле image_comparison
+      "(4) Post random memes in my Telegram channel", '\n', #публикует рандомные картинки из датабазы в тг-канал! ссылка: https://t.me/AutoPosterTestingSite
+      "(5) Clear my database",'\n',     #удаляет датабазу.
+      "(6) Terminate my work", '\n',    #удаляет датабазу и завершает работу
+      "With all that said, commands are sent via single digits (e.g. 1)", '\n',
+      '\n', "Enter your command", '\n')
     st.sidebar.title("Commands")
     command = st.sidebar.radio("Choose a command", ("Select", "1", "2", "3", "4", "5", "Exit"))
 
