@@ -1,5 +1,5 @@
 import subprocess
-pip3 install vk_api
+
 # установка библиотеки vk_api
 #subprocess.call(['pip', 'install', 'vk_api'])
 #импортируем мои модули и time
