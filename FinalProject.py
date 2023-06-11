@@ -29,39 +29,43 @@ print("Hi there! This is AutoShitposter.", '\n',
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 #command = st.text_input("Enter your input", key="unique_key")
-command = 0
-while (command != 6):
-    
-    command_key = "command_" + str(command)
-    command = st.text_input("Enter your input", key=command_key)
-    command = int(command) if command is not None and command.isdigit() else None
-    if command == 1:
-        memes.get_group_posts(access_token)
-        print('\n',"Enter new command",'\n')
-    elif command == 2:
-        ic.draw_graph()
-        print('\n',"Enter new command",'\n')
-    elif command == 3:
-        print("please input first group name (e.g. abotai for vk.com/abotai)")
-        name_1 = input()
-        print("please input second group name")
-        name_2 = input()
-        connection = ic.compare_memes(name_1,name_2)
-        print("found", connection, "re-posts")
-        print('\n',"Enter new command",'\n')
-    elif command == 4:
-        num = int(input("Введи число постов: "))
-        for i in range (num):
-            tg.do_it()
-            time.sleep(5)
-        print('\n',"Enter new command",'\n')
-    elif command == 5:
-        memes.clear_db()
-        print('\n',"Enter new command",'\n')
-    elif command == 6:
-        print('\n',"Goodbye!")
-        break
-    else: print('\n',"Enter new command",'\n')
+def main():
+    st.title("Streamlit Interface")
+    st.sidebar.title("Commands")
+    command = st.sidebar.radio("Choose a command", ("Select", "1", "2", "3", "4", "5", "Exit"))
+
+    if command == "1":
+        # memes.get_group_posts(access_token)
+        st.write("Command 1 executed")
+    elif command == "2":
+        # ic.draw_graph()
+        st.write("Command 2 executed")
+    elif command == "3":
+        name_1 = st.text_input("Please input first group name (e.g. abotai for vk.com/abotai)")
+        name_2 = st.text_input("Please input second group name")
+        if st.button("Compare Memes"):
+            # connection = ic.compare_memes(name_1, name_2)
+            connection = 0 # Replace with the actual connection value from the function
+            st.write(f"Found {connection} re-posts")
+    elif command == "4":
+        num = st.number_input("Введите число постов:", value=1, step=1)
+        if st.button("Execute Command 4"):
+            for i in range(num):
+                # tg.do_it()
+                time.sleep(5)
+            st.write("Command 4 executed")
+    elif command == "5":
+        if st.button("Clear DB"):
+            # memes.clear_db()
+            st.write("Database cleared")
+    elif command == "Exit":
+        st.write("Goodbye!")
+        st.stop()
+    else:
+        st.write("Please select a command")
+
+if __name__ == "__main__":
+    main()
         
 
 
