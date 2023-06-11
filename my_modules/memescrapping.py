@@ -1,9 +1,4 @@
 import streamlit as st
-import subprocess
-
-# установка библиотеки vk_api
-subprocess.call(['pip', 'install', 'vk_api'])
-
 import vk_api
 import requests
 import json
