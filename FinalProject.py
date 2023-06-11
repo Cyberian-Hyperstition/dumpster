@@ -28,35 +28,33 @@ print("Hi there! This is AutoShitposter.", '\n',
       '\n', "Enter your command", '\n')
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
-#command = st.text_input("Enter your input", key="unique_key")
 def main():
     st.title("Streamlit Interface")
     st.sidebar.title("Commands")
     command = st.sidebar.radio("Choose a command", ("Select", "1", "2", "3", "4", "5", "Exit"))
 
     if command == "1":
-        # memes.get_group_posts(access_token)
+        memes.get_group_posts(access_token)
         st.write("Command 1 executed")
     elif command == "2":
-        # ic.draw_graph()
+        ic.draw_graph()
         st.write("Command 2 executed")
     elif command == "3":
         name_1 = st.text_input("Please input first group name (e.g. abotai for vk.com/abotai)")
         name_2 = st.text_input("Please input second group name")
         if st.button("Compare Memes"):
-            # connection = ic.compare_memes(name_1, name_2)
-            connection = 0 # Replace with the actual connection value from the function
+            connection = ic.compare_memes(name_1, name_2)
             st.write(f"Found {connection} re-posts")
     elif command == "4":
         num = st.number_input("Введите число постов:", value=1, step=1)
         if st.button("Execute Command 4"):
             for i in range(num):
-                # tg.do_it()
+                tg.do_it()
                 time.sleep(5)
             st.write("Command 4 executed")
     elif command == "5":
         if st.button("Clear DB"):
-            # memes.clear_db()
+            memes.clear_db()
             st.write("Database cleared")
     elif command == "Exit":
         st.write("Goodbye!")
