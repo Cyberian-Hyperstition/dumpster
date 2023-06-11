@@ -30,7 +30,7 @@ print("Hi there! This is AutoShitposter.", '\n',
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 command = 0
 while (command != 6):
-    command = int(st.text_input("Enter your input"))
+    command = st.text_input("Enter your input")
     #command = int(input())
     if command == 1:
         memes.get_group_posts(access_token)
