@@ -2,7 +2,7 @@ import streamlit as st
 import vk_api
 
 # установка библиотеки vk_api
-st.write(!pip install vk_api)
+st.write("!pip install vk_api")
 
 import vk_api
 import requests
