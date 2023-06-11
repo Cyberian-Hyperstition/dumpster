@@ -1,5 +1,5 @@
 import sys
-sys.path.append("my_modules")
+sys.path.append("dumpster/my_modules")
 #импортируем мои модули и time
 import memescrapping as memes
 import image_comparison as ic
