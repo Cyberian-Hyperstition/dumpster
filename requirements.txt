@@ -5,5 +5,5 @@ telegram
 Pillow
 matplotlib
 networkx
-shutil
+
 pandas
