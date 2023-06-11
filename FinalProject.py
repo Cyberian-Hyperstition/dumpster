@@ -1,4 +1,4 @@
-import subprocess
+import streamlit as st
 
 # установка библиотеки vk_api
 #subprocess.call(['pip', 'install', 'vk_api'])
@@ -30,6 +30,7 @@ print("Hi there! This is AutoShitposter.", '\n',
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 command = 0
 while (command != 6):
+    user_input = st.text_input("Enter your input")
     command = int(input())
     if command == 1:
         memes.get_group_posts(access_token)
