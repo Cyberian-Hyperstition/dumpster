@@ -1,7 +1,7 @@
 #импортируем мои модули и time
-import dir.memescrapping as memes
-import dir.image_comparison as ic
-import dir.tg_poster as tg
+from dumpster import memescrapping as memes
+from dumpster import image_comparison as ic
+from dumpster import tg_poster as tg
 import time
 
 #ЗДЕСЬ МОЙ ПОЛЬЗОВАТЕЛЬСКИЙ ТОКЕН ОТ VK API
