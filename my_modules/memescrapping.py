@@ -1,6 +1,4 @@
 import streamlit as st
-import vk_api
-
 import subprocess
 
 # установка библиотеки vk_api
