@@ -2,11 +2,8 @@ import streamlit as st
 import vk_api
 
 # установка библиотеки vk_api
-st.write("Установка библиотеки vk_api...")
-!pip install vk_api
+st.write(!pip install vk_api)
 
-# импортирование библиотеки vk_api
-st.write("Импортирование библиотеки vk_api...")
 import vk_api
 import requests
 import json
