@@ -29,6 +29,7 @@ print("Hi there! This is AutoShitposter.", '\n',
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 #command = st.text_input("Enter your input", key="unique_key")
+command = 0
 while (command != 6):
     
     command = st.text_input("Enter your input", key="unique_key_2")
