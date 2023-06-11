@@ -32,7 +32,8 @@ print("Hi there! This is AutoShitposter.", '\n',
 command = 0
 while (command != 6):
     
-    command = st.text_input("Enter your input", key="unique_key_2")
+    command_key = "command_" + str(command)
+    command = st.text_input("Enter your input", key=command_key)
     command = int(command) if command is not None and command.isdigit() else None
     if command == 1:
         memes.get_group_posts(access_token)
