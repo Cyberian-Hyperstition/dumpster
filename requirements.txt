@@ -5,5 +5,5 @@ python-telegram-bot
 Pillow
 matplotlib
 networkx
-
+streamlit_option_menu
 pandas
