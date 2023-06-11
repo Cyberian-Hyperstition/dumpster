@@ -1,3 +1,25 @@
+import os
+import sys
+import importlib.util
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+module_path_1 = os.path.join(dir_path, "memescrapping.pyw")
+module_path_2 = os.path.join(dir_path, "image_comparison.pyw")
+module_path_3 = os.path.join(dir_path, "tg_poster.pyw")
+
+spec = importlib.util.spec_from_file_location("memescrapping", module_path_1)
+memescrapping = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(memescrapping)
+
+spec = importlib.util.spec_from_file_location("image_comparison", module_path_2)
+memescrapping = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(image_comparison)
+
+spec = importlib.util.spec_from_file_location("tg_poster", module_path_3)
+memescrapping = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(tg_poster)
+
 #импортируем мои модули и time
 import memescrapping as memes
 import image_comparison as ic
