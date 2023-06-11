@@ -28,9 +28,9 @@ print("Hi there! This is AutoShitposter.", '\n',
       '\n', "Enter your command", '\n')
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
-command = 0
+command = st.text_input("Enter your input", key="unique_key")
 while (command != 6):
-    command = st.text_input("Enter your input", key="unique_key")
+    
     #command = int(input())
     if command == 1:
         memes.get_group_posts(access_token)
