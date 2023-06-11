@@ -1,3 +1,4 @@
+!pip install vk_api
 import requests
 import json
 import os
