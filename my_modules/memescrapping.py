@@ -3,6 +3,8 @@ import json
 import os
 import time
 import re
+import subprocess
+subprocess.call(['pip', 'install', 'vk_api'])
 import vk_api
 import sqlite3
 import shutil
