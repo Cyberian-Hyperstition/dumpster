@@ -1,5 +1,5 @@
 import streamlit as st
-
+from streamlit_option_menu import option_menu
 # установка библиотеки vk_api
 #subprocess.call(['pip', 'install', 'vk_api'])
 #импортируем мои модули и time
