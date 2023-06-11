@@ -1,7 +1,7 @@
 vk_api
 telegram
-asyncio
-sqlite3
+
+
 Pillow
 matplotlib
 networkx
