@@ -1,9 +1,9 @@
 import sys
 sys.path.append("my_modules")
 #импортируем мои модули и time
-from my_modules import memescrapping as memes
-from my_modules import image_comparison as ic
-from my_modules import tg_poster as tg
+import memescrapping as memes
+import image_comparison as ic
+import tg_poster as tg
 import time
 
 #ЗДЕСЬ МОЙ ПОЛЬЗОВАТЕЛЬСКИЙ ТОКЕН ОТ VK API
