@@ -1,3 +1,4 @@
+import my_modules
 #импортируем мои модули и time
 from my_modules import memescrapping as memes
 from my_modules import image_comparison as ic
