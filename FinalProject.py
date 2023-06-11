@@ -1,5 +1,10 @@
+import os
 import sys
-sys.path.append("dumpster/my_modules")
+
+# Добавляем директорию my_modules в путь поиска модулей
+module_path = os.path.abspath(os.path.join('.'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
 #импортируем мои модули и time
 import memescrapping as memes
 import image_comparison as ic
