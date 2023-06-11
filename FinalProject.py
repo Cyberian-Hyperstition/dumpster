@@ -1,14 +1,8 @@
-import os
-import sys
 
-# Добавляем директорию my_modules в путь поиска модулей
-module_path = os.path.abspath(os.path.join('.'))
-if module_path not in sys.path:
-    sys.path.append(module_path)
 #импортируем мои модули и time
-import memescrapping as memes
-import image_comparison as ic
-import tg_poster as tg
+import my_modules.memescrapping as memes
+import my_modules.image_comparison as ic
+import my_modules.tg_poster as tg
 import time
 
 #ЗДЕСЬ МОЙ ПОЛЬЗОВАТЕЛЬСКИЙ ТОКЕН ОТ VK API
