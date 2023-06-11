@@ -16,6 +16,21 @@ access_token = "vk1.a.1RfXiXLjUfZmhwZoNqp3zvj9MrCtHO_VEvQVCJEE0PFFkovmnpo2Aeo3kS
 
 #Интерфейс, отвечает на цифры 1-6 и вызывает функционал, описанный выше.
 def main():
+    st.write("""
+    Hi there! This is AutoShitposter.
+
+    My functions are:
+    (1) Add group posts to my database
+    (2) Draw a graph of group re-posts
+    (3) Discover re-posting connections between two groups in my database
+    (4) Post random memes in my Telegram channel
+    (5) Clear my database
+    (6) Terminate my work
+
+    With all that said, commands are sent via single digits (e.g. 1)
+
+    Enter your command
+    """)
     st.title("Streamlit Interface")
     st.sidebar.title("Commands")
     command = st.sidebar.radio("Choose a command", ("Select", "1", "2", "3", "4", "5", "Exit"))
